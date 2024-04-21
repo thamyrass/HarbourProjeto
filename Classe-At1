@@ -1,0 +1,31 @@
+#include "hbclass.ch"
+
+CLASS Pessoa
+
+  DATA Nome
+  DATA SobreNome
+  DATA Nascimento
+  DATA Altura
+  DATA Signo
+
+
+  METHOD New ( Nome, SobreNome, Signo, Altura )
+    METHOD Idade()
+
+END CLASS
+
+METHOD New( Nome, SobreNome, Signo, Altura  )
+
+::Nome := Nome
+::SobreNome := SobreNome
+::Signo := Signo
+::Altura := Altura
+
+RETURN self
+METHOD Idade()
+
+  ? date() - ::Nascimento, "dias"
+  ? ( date() - ::Nascimento ) / 365, "anos"
+  ? INT(( date() - ::Nascimento ) / 365 ), "anos"
+
+RETURN
