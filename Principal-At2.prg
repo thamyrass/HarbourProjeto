@@ -12,6 +12,8 @@ LOCAL Signo := SPACE(100)
 SET DATE BRIT
 SET CENT ON
 
+oInputDados:= Input():New(NOME, SobreNome, Nascimento, Idade, Altura, Signo)
+
 CLS
 
 @01,01 SAY "Seu nome:" GET NOME valid !EMPTY(NOME) // Say é para exibir infos em locais determinados 
@@ -25,9 +27,11 @@ READ
 @07,01 SAY ""
 
 
-? Nome // ao finalizar o preenchimento dos dados, irá imprimir as informações na sequencia informada aqui 
-? SobreNome
-? Nascimento
-? Idade
-? Altura 
-? Signo
+? oInputDados:Nome // ao finalizar o preenchimento dos dados, irá imprimir as informações na sequencia informada aqui 
+? oInputDados:SobreNome
+? oInputDados:Nascimento
+? oInputDados:Idade
+? oInputDados:Altura 
+? oInputDados:Signo
+
+? INKEY(0)
