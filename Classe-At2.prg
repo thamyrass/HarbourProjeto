@@ -7,19 +7,20 @@ CLASS Input
   DATA Nascimento
   DATA Altura
   DATA Signo
+  DATA Idade
 
-  METHOD InputDados( Nome, SobreNome, Nascimento, Altura, Signo, Idade ) 
+  METHOD New ( Nome, SobreNome, Nascimento, Altura, Signo, Idade )
 
 ENDCLASS
 
-METHOD InputDados (Nome, SobreNome, Nascimento, Altura, Signo, Idade)
+METHOD New(Nome, SobreNome, Nascimento, Altura, Signo, Idade)
 ::Nome := Nome
 ::SobreNome := SobreNome
-:: Nascimento := Nascimento
+::Nascimento := Nascimento
 ::Altura := Altura
 ::Signo  := Signo
 ::Idade  := Idade
 
-RETURN Self
+RETURN self 
 
 RETURN
